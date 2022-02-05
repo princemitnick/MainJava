@@ -18,6 +18,4 @@ public class ForEachArray {
             System.out.println(name);
         }
     }
-
-
 }
