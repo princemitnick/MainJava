@@ -1,8 +1,6 @@
 package com.prince.java;
 
-import java.util.Scanner;
-
-public class Switch_cases {
+public class SwitchCases {
 
     public static void main(String... args){
         double value1 = 500d;

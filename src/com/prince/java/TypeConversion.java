@@ -13,6 +13,4 @@ public class TypeConversion {
         System.out.println("Success");
     }
 
-
-
 }
