@@ -2,10 +2,22 @@ package com.prince.java;
 
 public class MathEquation {
 
+    static {
+        int var0 = 10;
+        int var1 = 15;
+        int var2 = 20;
+    }
     double leftVal;
     double rightVal;
     char opCode;
     double result;
+
+    private static int numberOfCalculations;
+    private static double sumOfResults;
+
+    public static double getAverageResult(){
+        return sumOfResults / numberOfCalculations;
+    }
 
     public double getResult(){
         return this.result;
@@ -17,6 +29,22 @@ public class MathEquation {
 
     public double getRightVal(){
         return this.rightVal;
+    }
+
+    public void setLeftVal(double leftVal) {
+        this.leftVal = leftVal;
+    }
+
+    public void setRightVal(double rightVal) {
+        this.rightVal = rightVal;
+    }
+
+    public void setOpCode(char opCode) {
+        this.opCode = opCode;
+    }
+
+    public void setResult(double result) {
+        this.result = result;
     }
 
     public MathEquation(){}
@@ -31,7 +59,7 @@ public class MathEquation {
         this.rightVal = rightVal;
     }
 
-    void execute(){
+    public void execute(){
 
         switch (opCode){
             case 'a':
@@ -50,5 +78,25 @@ public class MathEquation {
                 System.out.println("Invalid opCode: "+ opCode);
                 break;
         }
+
+        numberOfCalculations++;
+        sumOfResults += result;
+
     }
+
+    public void execute(double leftVal, double rightVal){
+        this.leftVal = leftVal;
+        this.rightVal = rightVal;
+
+        execute();
+    }
+
+    public void execute(int leftVal, int rightVal){
+        this.leftVal = leftVal;
+        this.rightVal = rightVal;
+
+        execute();
+        result = (int) result;
+    }
+
 }
