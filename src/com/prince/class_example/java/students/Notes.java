@@ -3,11 +3,11 @@ package com.prince.class_example.java.students;
 public class Notes {
 
     Subject subject;
-    int note;
+    double note;
 
     public Notes(){}
 
-    public Notes(Subject subject, int note) {
+    public Notes(Subject subject, double note) {
         this.subject = subject;
         this.note = note;
     }
@@ -20,7 +20,7 @@ public class Notes {
         this.subject = subject;
     }
 
-    public int getNote() {
+    public double getNote() {
         return note;
     }
 

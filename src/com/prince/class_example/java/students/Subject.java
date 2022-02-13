@@ -3,7 +3,7 @@ package com.prince.class_example.java.students;
 public class Subject {
 
     String SubjectName;
-     double SubjectCoeff;
+    double SubjectCoeff;
 
     public Subject(){}
 

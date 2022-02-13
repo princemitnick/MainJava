@@ -8,10 +8,10 @@ public class Student {
 
     public Student(){}
 
-    public Student(int it, String nom, String prenom){
+    public Student(int it, String lastName, String firstName){
         this.id = id;
-        this.lastName = nom;
-        this.firstName = prenom;
+        this.lastName = lastName;
+        this.firstName = firstName;
     }
 
     public int getId() {
@@ -42,8 +42,8 @@ public class Student {
     public String toString() {
         return "Student{" +
                 "id=" + id +
-                ", nom='" + lastName + '\'' +
-                ", prenom='" + firstName + '\'' +
+                ", lastname='" + lastName + '\'' +
+                ", firstname='" + firstName + '\'' +
                 '}';
     }
 }

@@ -9,6 +9,6 @@
 # Projects
 
 ## Access student documents (Bulletin)
-* Student's documents must conains :
-1) Student infos
+* Student's documents must contains :
+1) Student info
 2) Student Notes
