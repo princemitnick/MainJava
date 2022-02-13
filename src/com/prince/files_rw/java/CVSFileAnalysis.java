@@ -1,4 +1,4 @@
-package com.prince.files.java;
+package com.prince.files_rw.java;
 
 import java.io.BufferedReader;
 import java.io.IOException;
