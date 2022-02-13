@@ -9,7 +9,7 @@ public class CVSFileAnalysis {
 
     public static void main(String... args){
 
-        Path path = Path.of("/home/princemitnick/java/nio/data.csv");
+        Path path = Path.of("./data.csv");
         try (BufferedReader reader  = Files.newBufferedReader(path)) {
             String line = reader.readLine();
 

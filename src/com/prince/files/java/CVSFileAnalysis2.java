@@ -11,7 +11,7 @@ public class CVSFileAnalysis2 {
 
     public static void main(String... args){
 
-        Path path = Path.of("/home/princemitnick/java/nio/data.csv");
+        Path path = Path.of("./data.csv");
         Function<String, Person> lineToPerson =
                 line -> lineToPerson(line);
 
