@@ -6,7 +6,19 @@ public class Main {
 
     public static void main(String[] args) {
 	// write your code here
-        performCalculations();
+        //performCalculations();
+        Divider divider = new Divider();
+        doCaculation(divider, 8,4);
+    }
+
+    public static void doCaculation(CalculateBase calculation, double leftVal, double rigthVal){
+
+        calculation.setLeftVal(leftVal);
+        calculation.setRightVal(rigthVal);
+        calculation.calculate();
+        System.out.println("Calculation result = " + calculation.getResult() );
+
+
     }
 
     static void performCalculations(){
