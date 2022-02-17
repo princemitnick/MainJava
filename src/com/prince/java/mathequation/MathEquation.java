@@ -1,4 +1,4 @@
-package com.prince.java;
+package com.prince.java.mathequation;
 
 public class MathEquation {
 

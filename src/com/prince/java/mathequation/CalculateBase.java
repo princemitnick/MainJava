@@ -1,4 +1,4 @@
-package com.prince.java;
+package com.prince.java.mathequation;
 
 public class CalculateBase {
 
@@ -31,6 +31,5 @@ public class CalculateBase {
     }
 
     public void calculate(){
-
     }
 }

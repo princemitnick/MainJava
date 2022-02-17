@@ -1,6 +1,6 @@
-package com.prince.java;
+package com.prince.java.mathequation;
 
-public class Divider extends  CalculateBase{
+public class Divider extends CalculateBase {
 
     @Override
     public void calculate() {

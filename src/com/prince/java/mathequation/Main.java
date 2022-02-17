@@ -1,6 +1,4 @@
-package com.prince.java;
-
-import org.jetbrains.annotations.NotNull;
+package com.prince.java.mathequation;
 
 public class Main {
 
@@ -11,13 +9,13 @@ public class Main {
         doCaculation(divider, 8,4);
     }
 
+
     public static void doCaculation(CalculateBase calculation, double leftVal, double rigthVal){
 
         calculation.setLeftVal(leftVal);
         calculation.setRightVal(rigthVal);
         calculation.calculate();
         System.out.println("Calculation result = " + calculation.getResult() );
-
 
     }
 

@@ -1,6 +1,6 @@
-package com.prince.java;
+package com.prince.java.mathequation;
 
-public class Substracter extends CalculateBase{
+public class Substracter extends CalculateBase {
 
     @Override
     public void calculate() {
