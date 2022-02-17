@@ -1,4 +1,4 @@
-package com.prince.java;
+package com.prince.java.all;
 
 import java.util.ArrayList;
 import java.util.List;
