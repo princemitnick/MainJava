@@ -14,7 +14,20 @@ public class Main {
         //CalculateBase calculateBase = create(MathOperation.ADD, 5, 2);
         //calculateBase.calculate();
         //System.out.println(calculateBase.getResult());
-        executeInteractively();
+        //executeInteractively();
+        dynamicInteractivity();
+    }
+
+    public static void dynamicInteractivity(){
+        DynamicHelper helper = new DynamicHelper(new MathProcessing[]{
+                new Adder()
+        });
+
+        System.out.println("Enter an operation and two numbers");
+        Scanner scanner = new Scanner(System.in);
+        String userInput = scanner.nextLine();
+
+        helper.process(userInput);
     }
 
     public static void executeInteractively(){
