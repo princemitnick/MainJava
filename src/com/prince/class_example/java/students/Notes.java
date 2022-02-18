@@ -5,7 +5,8 @@ public class Notes {
     Subject subject;
     double note;
 
-    public Notes(){}
+    public Notes() {
+    }
 
     public Notes(Subject subject, double note) {
         this.subject = subject;

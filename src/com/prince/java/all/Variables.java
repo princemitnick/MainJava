@@ -2,13 +2,13 @@ package com.prince.java.all;
 
 public class Variables {
 
-    public static  void main(String... args){
+    public static void main(String... args) {
         int myVar;
         myVar = 50;
         final int test = 40;
         System.out.println(myVar);
 
-        int anotherVar  = 100;
+        int anotherVar = 100;
         System.out.println(anotherVar);
 
         myVar = anotherVar;

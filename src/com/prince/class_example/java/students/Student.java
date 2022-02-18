@@ -6,9 +6,10 @@ public class Student {
     String lastName;
     String firstName;
 
-    public Student(){}
+    public Student() {
+    }
 
-    public Student(int it, String lastName, String firstName){
+    public Student(int it, String lastName, String firstName) {
         this.id = id;
         this.lastName = lastName;
         this.firstName = firstName;

@@ -2,11 +2,14 @@ package com.prince.java.mathequation;
 
 import com.prince.java.mathequation.CalculateBase;
 
-public class Multiplier extends CalculateBase implements MathProcessing{
+public class Multiplier extends CalculateBase implements MathProcessing {
 
-    public Multiplier(){}
+    public Multiplier() {
+    }
 
-    public Multiplier(double leftVal, double righVal){super(leftVal,righVal);}
+    public Multiplier(double leftVal, double righVal) {
+        super(leftVal, righVal);
+    }
 
     @Override
     public void calculate() {

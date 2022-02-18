@@ -1,18 +1,17 @@
 package com.prince.java.all;
+
 import java.util.Scanner;
 
-public class ConditionnalLogic
-{
-    public static void main(String[] args){
+public class ConditionnalLogic {
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("> Entrez un chiffre: ");
         int ch = scanner.nextInt();
 
-        if (ch == 0){
+        if (ch == 0) {
             System.out.println("La valeur est nulle");
-        }
-        else{
+        } else {
             System.out.println("Good");
         }
 

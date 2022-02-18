@@ -2,7 +2,7 @@ package com.prince.java.all;
 
 public class TypeConversion {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         float floatVal = 1.0f;
         double doubleVal = 4.0d;
         byte byteVal = 7;

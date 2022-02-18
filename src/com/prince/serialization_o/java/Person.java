@@ -7,7 +7,8 @@ public class Person implements Serializable {
     public String name;
     public int age;
 
-    public Person(){}
+    public Person() {
+    }
 
     public Person(String name, int age) {
         this.name = name;
@@ -41,6 +42,6 @@ public class Person implements Serializable {
         return "Person{" +
                 "name='" + name + '\'' +
                 ", age=" + age +
-                ", status: "+status+ '}';
+                ", status: " + status + '}';
     }
 }

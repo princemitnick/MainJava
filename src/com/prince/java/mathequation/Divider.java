@@ -2,10 +2,11 @@ package com.prince.java.mathequation;
 
 public class Divider extends CalculateBase implements MathProcessing {
 
-    public Divider(){}
+    public Divider() {
+    }
 
-    public Divider(double leftVal, double rightVal){
-        super(leftVal,rightVal);
+    public Divider(double leftVal, double rightVal) {
+        super(leftVal, rightVal);
     }
 
     @Override

@@ -2,7 +2,7 @@ package com.prince.string.java;
 
 public class StringTest4 {
 
-    public static void main(String... args){
+    public static void main(String... args) {
 
         int iVal = 1234567;
 

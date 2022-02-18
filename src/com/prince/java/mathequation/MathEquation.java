@@ -7,6 +7,7 @@ public class MathEquation {
         int var1 = 15;
         int var2 = 20;
     }
+
     double leftVal;
     double rightVal;
     char opCode;
@@ -15,19 +16,19 @@ public class MathEquation {
     private static int numberOfCalculations;
     private static double sumOfResults;
 
-    public static double getAverageResult(){
+    public static double getAverageResult() {
         return sumOfResults / numberOfCalculations;
     }
 
-    public double getResult(){
+    public double getResult() {
         return this.result;
     }
 
-    public double getLeftVal(){
+    public double getLeftVal() {
         return this.leftVal;
     }
 
-    public double getRightVal(){
+    public double getRightVal() {
         return this.rightVal;
     }
 
@@ -47,21 +48,22 @@ public class MathEquation {
         this.result = result;
     }
 
-    public MathEquation(){}
+    public MathEquation() {
+    }
 
-    public MathEquation(char opCode){
+    public MathEquation(char opCode) {
         this.opCode = opCode;
     }
 
-    public MathEquation(char opCode, double leftVal, double rightVal){
+    public MathEquation(char opCode, double leftVal, double rightVal) {
         this(opCode);
         this.leftVal = leftVal;
         this.rightVal = rightVal;
     }
 
-    public void execute(){
+    public void execute() {
 
-        switch (opCode){
+        switch (opCode) {
             case 'a':
                 result = leftVal + rightVal;
                 break;
@@ -75,7 +77,7 @@ public class MathEquation {
                 result = rightVal != 0 ? leftVal / rightVal : 0.0d;
                 break;
             default:
-                System.out.println("Invalid opCode: "+ opCode);
+                System.out.println("Invalid opCode: " + opCode);
                 break;
         }
 
@@ -84,14 +86,14 @@ public class MathEquation {
 
     }
 
-    public void execute(double leftVal, double rightVal){
+    public void execute(double leftVal, double rightVal) {
         this.leftVal = leftVal;
         this.rightVal = rightVal;
 
         execute();
     }
 
-    public void execute(int leftVal, int rightVal){
+    public void execute(int leftVal, int rightVal) {
         this.leftVal = leftVal;
         this.rightVal = rightVal;
 

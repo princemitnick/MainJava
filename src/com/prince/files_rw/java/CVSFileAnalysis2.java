@@ -8,7 +8,7 @@ import java.util.stream.Stream;
 
 public class CVSFileAnalysis2 {
 
-    public static void main(String... args){
+    public static void main(String... args) {
 
         Path path = Path.of("./data.csv");
         Function<String, Person> lineToPerson =
@@ -21,7 +21,9 @@ public class CVSFileAnalysis2 {
                     .forEach(System.out::println);
         } catch (IOException e) {
             e.printStackTrace();
-        } ;{
+        }
+        ;
+        {
 
         }
 
@@ -29,12 +31,12 @@ public class CVSFileAnalysis2 {
     }
 
     private static Person lineToPerson(String line) {
-        String [] elements = line.split(";");
+        String[] elements = line.split(";");
         String name = elements[0];
         int age = Integer.parseInt(elements[1]);
         String city = elements[2];
 
-        Person p = new Person(name,age,city);
+        Person p = new Person(name, age, city);
 
         return p;
     }

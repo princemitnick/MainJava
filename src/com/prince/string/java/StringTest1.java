@@ -2,7 +2,7 @@ package com.prince.string.java;
 
 public class StringTest1 {
 
-    public static void main(String... args){
+    public static void main(String... args) {
         String s1 = "I Love";
         s1 += " Java";
         String s2 = "I";

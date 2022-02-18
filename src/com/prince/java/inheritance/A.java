@@ -3,17 +3,21 @@ package com.prince.java.inheritance;
 public interface A {
 
     void a();
+
     void b();
+
     void c();
+
     void d();
 
 }
 
-abstract  class B implements  A{
-    public void c(){
+abstract class B implements A {
+    public void c() {
         System.out.println("I'm c");
     }
-    abstract  void e();
+
+    abstract void e();
 
 }
 
@@ -33,14 +37,15 @@ class M extends B {
     public void d() {
         System.out.println("I'm c");
     }
+
     @Override
     public void e() {
         System.out.println("I'm e");
     }
 }
 
-class Test4{
-    public static void main(String... args){
+class Test4 {
+    public static void main(String... args) {
         A a = new M();
         a.a();
         a.b();

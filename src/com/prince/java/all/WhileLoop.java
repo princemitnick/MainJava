@@ -2,11 +2,11 @@ package com.prince.java.all;
 
 public class WhileLoop {
 
-    public static void main(String... arg){
+    public static void main(String... arg) {
         int someValue = 4;
         int factorial = 1;
 
-        while(someValue > 1){
+        while (someValue > 1) {
             factorial *= someValue;
             someValue--;
         }
@@ -15,11 +15,11 @@ public class WhileLoop {
 
         int iVal = 80;
 
-        do{
+        do {
             System.out.println(iVal);
             System.out.println(" * 2 = ");
             iVal *= 2;
             System.out.println(iVal);
-        }while(iVal < 25);
+        } while (iVal < 25);
     }
 }

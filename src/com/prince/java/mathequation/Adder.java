@@ -1,10 +1,12 @@
 package com.prince.java.mathequation;
 
-public class Adder extends CalculateBase implements MathProcessing{
+public class Adder extends CalculateBase implements MathProcessing {
 
-    public Adder(){}
-    public Adder(double leftVal, double rightVal){
-        super(leftVal,rightVal);
+    public Adder() {
+    }
+
+    public Adder(double leftVal, double rightVal) {
+        super(leftVal, rightVal);
     }
 
     @Override

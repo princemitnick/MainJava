@@ -1,7 +1,7 @@
 package com.prince.java.all;
 
 public class Operator {
-    public static void main(String... args){
+    public static void main(String... args) {
         int valA = 21;
         int valB = 6;
         int valC = 3;

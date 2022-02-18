@@ -5,7 +5,7 @@ import java.util.List;
 
 public class DummyModelMain {
 
-    public static void main(String... args){
+    public static void main(String... args) {
         List<DummyModel> dummyModelList = new ArrayList<>();
 
         DummyModel dm1 = new DummyModel("Jean");

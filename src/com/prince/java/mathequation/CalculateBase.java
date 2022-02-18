@@ -6,8 +6,10 @@ public abstract class CalculateBase {
     private double rightVal;
     private double result;
 
-    public CalculateBase(){}
-    public CalculateBase(double leftVal, double righVal){
+    public CalculateBase() {
+    }
+
+    public CalculateBase(double leftVal, double righVal) {
         this.leftVal = leftVal;
         this.rightVal = righVal;
     }

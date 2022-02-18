@@ -5,12 +5,12 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
+        // write your code here
         //performCalculations();
         //Divider divider = new Divider();
-       // doCaculation(divider, 8,4);
+        // doCaculation(divider, 8,4);
 
-    //    performMoreCalculations();
+        //    performMoreCalculations();
         //CalculateBase calculateBase = create(MathOperation.ADD, 5, 2);
         //calculateBase.calculate();
         //System.out.println(calculateBase.getResult());
@@ -18,9 +18,10 @@ public class Main {
         dynamicInteractivity();
     }
 
-    public static void dynamicInteractivity(){
+    public static void dynamicInteractivity() {
         DynamicHelper helper = new DynamicHelper(new MathProcessing[]{
-                new Adder()
+                new Adder(),
+                new PowerOf()
         });
 
         System.out.println("Enter an operation and two numbers");
@@ -30,11 +31,11 @@ public class Main {
         helper.process(userInput);
     }
 
-    public static void executeInteractively(){
+    public static void executeInteractively() {
         System.out.println("Enter an operation and two numbers: ");
         Scanner scanner = new Scanner(System.in);
         String userInput = scanner.nextLine();
-        String [] parts = userInput.split(" ");
+        String[] parts = userInput.split(" ");
         performOperation(parts);
     }
 
@@ -45,13 +46,13 @@ public class Main {
         double rightVal = Double.parseDouble(parts[2]);
         CalculateBase calculation = create(mathOperation, leftVal, rightVal);
         calculation.calculate();
-        System.out.println("Operation performed : "+mathOperation);
+        System.out.println("Operation performed : " + mathOperation);
         System.out.println(calculation.getResult());
     }
 
-    public static CalculateBase create(MathOperation operation, double leftVal, double rightVal){
+    public static CalculateBase create(MathOperation operation, double leftVal, double rightVal) {
         CalculateBase caculation = null;
-        switch (operation){
+        switch (operation) {
             case ADD:
                 caculation = new Adder(leftVal, rightVal);
                 break;
@@ -69,47 +70,47 @@ public class Main {
     }
 
 
-    public static void doCaculation(CalculateBase calculation, double leftVal, double rigthVal){
+    public static void doCaculation(CalculateBase calculation, double leftVal, double rigthVal) {
 
         calculation.setLeftVal(leftVal);
         calculation.setRightVal(rigthVal);
         calculation.calculate();
-        System.out.println("Calculation result = " + calculation.getResult() );
+        System.out.println("Calculation result = " + calculation.getResult());
 
     }
 
-    public static void performMoreCalculations(){
+    public static void performMoreCalculations() {
 
-        CalculateBase [] calculations = {
-                new Divider(100.0d,50.0d),
-                new Adder(25.0d,92.0d),
-                new Substracter(225.0d,17.0d),
-                new Multiplier(11.0d,3.0d)
+        CalculateBase[] calculations = {
+                new Divider(100.0d, 50.0d),
+                new Adder(25.0d, 92.0d),
+                new Substracter(225.0d, 17.0d),
+                new Multiplier(11.0d, 3.0d)
         };
 
         System.out.println();
         System.out.println("Array Calculations");
 
-        for (CalculateBase calculateBase: calculations) {
+        for (CalculateBase calculateBase : calculations) {
             calculateBase.calculate();
-            System.out.println("result : "+ calculateBase.getResult());
+            System.out.println("result : " + calculateBase.getResult());
         }
     }
 
-    static void performCalculations(){
-        MathEquation [] equations = new MathEquation[4];
+    static void performCalculations() {
+        MathEquation[] equations = new MathEquation[4];
 
         equations[0] = new MathEquation('d', 100.0d, 50.0d);
         equations[1] = new MathEquation('a', 25.0d, 92.0d);
         equations[2] = new MathEquation('s', 225.0d, 17.0d);
         equations[3] = new MathEquation('m', 11.0d, 3.0d);
 
-        for (MathEquation equation: equations){
+        for (MathEquation equation : equations) {
             equation.execute();
             System.out.println("result = " + equation.getResult());
         }
 
-        System.out.println("Average result = "+MathEquation.getAverageResult());
+        System.out.println("Average result = " + MathEquation.getAverageResult());
 
         System.out.println();
         System.out.println("Using execute overloads");
@@ -121,13 +122,13 @@ public class Main {
 
         equationOverload.execute(leftDouble, righDouble);
 
-        System.out.println("Overloaded result with double : "+equationOverload.getResult());
+        System.out.println("Overloaded result with double : " + equationOverload.getResult());
 
         int leftInt = 9;
         int righInt = 4;
 
         equationOverload.execute(leftInt, righInt);
-        System.out.println("Overloaded result with ints: "+equationOverload.getResult());
+        System.out.println("Overloaded result with ints: " + equationOverload.getResult());
     }
 
 

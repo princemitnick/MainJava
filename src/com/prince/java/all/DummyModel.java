@@ -4,18 +4,19 @@ public class DummyModel {
 
     String name;
 
-    public DummyModel(){}
+    public DummyModel() {
+    }
 
-    public DummyModel(String name){
+    public DummyModel(String name) {
         this.name = name;
     }
 
-    public void setName(String name){
+    public void setName(String name) {
         this.name = name;
     }
 
     @Override
-    public String toString(){
+    public String toString() {
 
         return name;
     }

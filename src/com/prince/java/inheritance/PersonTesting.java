@@ -31,9 +31,9 @@ public final class PersonTesting {
                     prenom == persons.prenom;
         }
     */
-    public static void main(String... args){
-        PersonTesting p = new PersonTesting("001","P","S");
-        PersonTesting p2 = new PersonTesting("001","P","S");
+    public static void main(String... args) {
+        PersonTesting p = new PersonTesting("001", "P", "S");
+        PersonTesting p2 = new PersonTesting("001", "P", "S");
 
         System.out.println(p.equals(p2));
     }

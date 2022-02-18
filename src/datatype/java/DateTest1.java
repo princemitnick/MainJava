@@ -1,2 +1,4 @@
-package datatype.java;public class DateTest1 {
+package datatype.java;
+
+public class DateTest1 {
 }

@@ -1,9 +1,13 @@
 package com.prince.java.mathequation;
 
-public class Substracter extends CalculateBase implements MathProcessing{
+public class Substracter extends CalculateBase implements MathProcessing {
 
-    public Substracter(){}
-    public Substracter(double leftVal, double righVal){super(leftVal,righVal);}
+    public Substracter() {
+    }
+
+    public Substracter(double leftVal, double righVal) {
+        super(leftVal, righVal);
+    }
 
     @Override
     public void calculate() {

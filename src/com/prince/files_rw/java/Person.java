@@ -6,7 +6,8 @@ public class Person {
     private int age;
     private String city;
 
-    public Person(){}
+    public Person() {
+    }
 
     public Person(String name, int age, String city) {
         this.name = name;

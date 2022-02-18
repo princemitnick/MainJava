@@ -7,7 +7,7 @@ import java.util.List;
 public class Main {
 
 
-    public static void main(String... args){
+    public static void main(String... args) {
         List<Person> people = new ArrayList<>();
 
         Person p0 = new Person("Prince", 17);
@@ -29,9 +29,9 @@ public class Main {
 
     }
 
-    public static void writeToFile(List<Person> list){
+    public static void writeToFile(List<Person> list) {
 
-        try (ObjectOutputStream objostr = new ObjectOutputStream(new FileOutputStream("data.bin"))){
+        try (ObjectOutputStream objostr = new ObjectOutputStream(new FileOutputStream("data.bin"))) {
             objostr.writeObject(list);
             objostr.close();
 
@@ -42,12 +42,12 @@ public class Main {
         }
     }
 
-    public static void readFile(){
+    public static void readFile() {
 
         try (ObjectInputStream objistr = new ObjectInputStream(new FileInputStream("data.bin"))) {
 
             List<Person> list = (List) objistr.readObject();
-            for (int i = 0; i< list.size(); i++){
+            for (int i = 0; i < list.size(); i++) {
                 System.out.println(list.get(i).toString());
             }
 
@@ -61,12 +61,12 @@ public class Main {
 
     }
 
-    public static void addPersonToList(List<Person> list,Person p){
+    public static void addPersonToList(List<Person> list, Person p) {
         list.add(p);
     }
 
-    public static void showListOfPerson(List<Person> list){
-        for (int i=0; i< list.size(); i++){
+    public static void showListOfPerson(List<Person> list) {
+        for (int i = 0; i < list.size(); i++) {
             System.out.println(list.get(i).toString());
         }
     }

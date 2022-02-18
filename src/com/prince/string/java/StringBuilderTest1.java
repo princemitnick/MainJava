@@ -2,7 +2,7 @@ package com.prince.string.java;
 
 public class StringBuilderTest1 {
 
-    public static void main(String... args){
+    public static void main(String... args) {
 
         StringBuilder sb = new StringBuilder();
 
@@ -32,7 +32,6 @@ public class StringBuilderTest1 {
         // Reverse string
 
 
-
         String s4 = sb.reverse().toString();
 
 
@@ -40,10 +39,10 @@ public class StringBuilderTest1 {
         String s5 = sb.toString();
         String s6 = "";
 
-        System.out.println(s5.length()-1);
+        System.out.println(s5.length() - 1);
 
-        for (int index=s5.length()-1; index>=0; index--)
-            s6 = s5.charAt(index)+s6;
+        for (int index = s5.length() - 1; index >= 0; index--)
+            s6 = s5.charAt(index) + s6;
 
         System.out.println("Show - with charArt method");
         System.out.println(s6);
@@ -63,8 +62,6 @@ public class StringBuilderTest1 {
 
         System.out.println(s7b);
         System.out.println(s7b.reverse());
-
-
 
 
     }

@@ -2,14 +2,14 @@ package com.prince.java.all;
 
 public class SwitchCases {
 
-    public static void main(String... args){
+    public static void main(String... args) {
         double value1 = 500d;
         double value2 = 100d;
         double result = 0.0d;
         char opCode = 'd';
 
 
-        switch (opCode){
+        switch (opCode) {
             case 'a':
                 result = value1 + value2;
                 break;
@@ -23,7 +23,7 @@ public class SwitchCases {
                 result = value1 / value2;
                 break;
             default:
-                System.out.println("Invalid opCode: "+opCode);
+                System.out.println("Invalid opCode: " + opCode);
                 result = 0.0d;
         }
         System.out.println(result);

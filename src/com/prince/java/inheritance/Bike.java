@@ -8,15 +8,17 @@ public abstract class Bike {
 class Honda4 extends Bike {
 
     int speed;
+
     {
         speed = 8;
     }
+
     @Override
-     void run() {
-        System.out.println("Bike is running at : "+8);
+    void run() {
+        System.out.println("Bike is running at : " + 8);
     }
 
-    public static void main(String... args){
+    public static void main(String... args) {
         Bike b = new Honda4();
         b.run();
     }

@@ -5,7 +5,8 @@ public class Subject {
     String SubjectName;
     double SubjectCoeff;
 
-    public Subject(){}
+    public Subject() {
+    }
 
     public Subject(String subjectName, double subjectCoeff) {
         this.SubjectName = subjectName;
