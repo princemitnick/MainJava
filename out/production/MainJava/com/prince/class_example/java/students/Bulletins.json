@@ -1,0 +1,75 @@
+{
+  "Author": "Jean Baptiste Prince Stanley",
+  "bulletin":{
+    "id": 1,
+    "students": {
+      "id": 1,
+      "lastname": "Prince",
+      "firstname": "Stanley"
+    },
+    "notes": {
+      "Subjects": [
+        {
+          "name": "Math-001",
+          "coeff": 100.0,
+          "note": 67.5
+        },
+        {
+          "name": "Stat-001",
+          "coeff": 100.0,
+          "note": 78.0
+        },
+        {
+          "name": "Prog-001",
+          "coeff": 100,
+          "note": 55.5
+        },
+        {
+          "name": "System-001",
+          "coeff": 200.0,
+          "note": 120.0
+        },
+        {
+          "name": "Networking-001",
+          "coeff": 200.0,
+          "note": 170.0
+        }
+      ],
+      "id": 2,
+      "students": {
+        "id": 2,
+        "lastname": "Jean",
+        "firstname": "Lovensky"
+      },
+      "notes": {
+        "Subjects": [
+          {
+            "name": "Math-001",
+            "coeff": 100.0,
+            "note": 85.5
+          },
+          {
+            "name": "Stat-001",
+            "coeff": 100.0,
+            "note": 90.0
+          },
+          {
+            "name": "Prog-001",
+            "coeff": 100.0,
+            "note": 50.0
+          },
+          {
+            "name": "System-001",
+            "coeff": 200.0,
+            "note": 139.0
+          },
+          {
+            "name": "Networking-001",
+            "coeff": 200.0,
+            "note": 176.2
+          }
+        ]
+
+      }
+    }
+}
