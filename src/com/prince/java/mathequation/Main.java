@@ -1,12 +1,58 @@
 package com.prince.java.mathequation;
 
+import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args) {
 	// write your code here
         //performCalculations();
-        Divider divider = new Divider();
-        doCaculation(divider, 8,4);
+        //Divider divider = new Divider();
+       // doCaculation(divider, 8,4);
+
+    //    performMoreCalculations();
+        //CalculateBase calculateBase = create(MathOperation.ADD, 5, 2);
+        //calculateBase.calculate();
+        //System.out.println(calculateBase.getResult());
+        executeInteractively();
+    }
+
+    public static void executeInteractively(){
+        System.out.println("Enter an operation and two numbers: ");
+        Scanner scanner = new Scanner(System.in);
+        String userInput = scanner.nextLine();
+        String [] parts = userInput.split(" ");
+        performOperation(parts);
+    }
+
+    private static void performOperation(String[] parts) {
+
+        MathOperation mathOperation = com.prince.java.mathequation.MathOperation.valueOf(parts[0].toUpperCase());
+        double leftVal = Double.parseDouble(parts[1]);
+        double rightVal = Double.parseDouble(parts[2]);
+        CalculateBase calculation = create(mathOperation, leftVal, rightVal);
+        calculation.calculate();
+        System.out.println("Operation performed : "+mathOperation);
+        System.out.println(calculation.getResult());
+    }
+
+    public static CalculateBase create(MathOperation operation, double leftVal, double rightVal){
+        CalculateBase caculation = null;
+        switch (operation){
+            case ADD:
+                caculation = new Adder(leftVal, rightVal);
+                break;
+            case SUBSTRACT:
+                caculation = new Substracter(leftVal, rightVal);
+                break;
+            case MULTIPLY:
+                caculation = new Multiplier(leftVal, rightVal);
+                break;
+            case DIVIDE:
+                caculation = new Divider(leftVal, rightVal);
+                break;
+        }
+        return caculation;
     }
 
 
@@ -17,6 +63,24 @@ public class Main {
         calculation.calculate();
         System.out.println("Calculation result = " + calculation.getResult() );
 
+    }
+
+    public static void performMoreCalculations(){
+
+        CalculateBase [] calculations = {
+                new Divider(100.0d,50.0d),
+                new Adder(25.0d,92.0d),
+                new Substracter(225.0d,17.0d),
+                new Multiplier(11.0d,3.0d)
+        };
+
+        System.out.println();
+        System.out.println("Array Calculations");
+
+        for (CalculateBase calculateBase: calculations) {
+            calculateBase.calculate();
+            System.out.println("result : "+ calculateBase.getResult());
+        }
     }
 
     static void performCalculations(){

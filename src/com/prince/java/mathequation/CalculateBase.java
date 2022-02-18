@@ -1,10 +1,16 @@
 package com.prince.java.mathequation;
 
-public class CalculateBase {
+public abstract class CalculateBase {
 
     private double leftVal;
     private double rightVal;
     private double result;
+
+    public CalculateBase(){}
+    public CalculateBase(double leftVal, double righVal){
+        this.leftVal = leftVal;
+        this.rightVal = righVal;
+    }
 
     public double getLeftVal() {
         return leftVal;
@@ -30,6 +36,6 @@ public class CalculateBase {
         this.result = result;
     }
 
-    public void calculate(){
-    }
+    public abstract void calculate();
+
 }
