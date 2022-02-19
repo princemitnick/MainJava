@@ -9,9 +9,7 @@ import java.io.IOException;
 public class Main {
 
     public static void main(String... args){
-        BufferedReader reader = null;
-        try{
-            reader = new BufferedReader(new FileReader(args[0]));
+        try (BufferedReader reader = new BufferedReader(new FileReader(args[0]))){
             String inputLine = null;
             while((inputLine = reader.readLine()) != null)
                 performOperation(inputLine);
@@ -19,16 +17,9 @@ public class Main {
         }catch (Exception ex){
             System.out.println("Error: "+ ex.getMessage());
 
-        }finally {
-            try {
-
-                System.out.println("Closing file - " + args[0]);
-                reader.close();
-            } catch (IOException e) {
-                System.out.println("Error closing file");
-            }
         }
     }
+
 
     public static void performOperation(String inputLine){
         String [] parts = inputLine.split(" ");
