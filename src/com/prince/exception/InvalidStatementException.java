@@ -6,5 +6,9 @@ public class InvalidStatementException extends Exception {
         super(message);
     }
 
+    public InvalidStatementException(String message, Exception ex){
+        super(message, ex);
+    }
+
 
 }
