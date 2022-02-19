@@ -1,6 +1,6 @@
 {
   "Author": "Jean Baptiste Prince Stanley",
-  "bulletin":{
+  "bulletin": {
     "id": 1,
     "students": {
       "id": 1,
@@ -69,7 +69,6 @@
             "note": 176.2
           }
         ]
-
       }
     }
-}
+  }
