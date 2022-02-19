@@ -19,20 +19,29 @@ public class Main {
         catch (IOException iex){
             System.out.println(iex.getMessage());
         }
+        catch (InvalidStatementException invalidStatementException){
+            System.out.println(invalidStatementException.getMessage());
+        }
         catch (Exception ex){
             System.out.println(ex.getMessage());
         }
     }
 
-    private static void processFile(BufferedReader reader) throws IOException {
+    private static void processFile(BufferedReader reader) throws IOException, InvalidStatementException {
         String inputLine = null;
         while((inputLine = reader.readLine()) != null)
             performOperation(inputLine);
     }
 
 
-    public static void performOperation(String inputLine){
+    public static void performOperation(String inputLine) throws InvalidStatementException{
         String [] parts = inputLine.split(" ");
+
+        if(parts.length != 3){
+            throw new InvalidStatementException(
+                    "Statement must have 3 parts: operation leftVal rightVal");
+        }
+
         MathOperation operation = MathOperation.valueOf(parts[0].toUpperCase());
         int leftVal = valueFromWord(parts[1]);
         int righVal = valueFromWord(parts[2]);
