@@ -3,6 +3,7 @@ package com.prince.exception;
 import com.prince.java.mathequation.MathOperation;
 
 import java.io.BufferedReader;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
@@ -10,14 +11,23 @@ public class Main {
 
     public static void main(String... args){
         try (BufferedReader reader = new BufferedReader(new FileReader(args[0]))){
-            String inputLine = null;
-            while((inputLine = reader.readLine()) != null)
-                performOperation(inputLine);
+            processFile(reader);
 
-        }catch (Exception ex){
-            System.out.println("Error: "+ ex.getMessage());
-
+        }catch (FileNotFoundException fex){
+            System.out.println("File not found: "+ args[0]);
         }
+        catch (IOException iex){
+            System.out.println(iex.getMessage());
+        }
+        catch (Exception ex){
+            System.out.println(ex.getMessage());
+        }
+    }
+
+    private static void processFile(BufferedReader reader) throws IOException {
+        String inputLine = null;
+        while((inputLine = reader.readLine()) != null)
+            performOperation(inputLine);
     }
 
 
@@ -45,6 +55,12 @@ public class Main {
                 result = leftVal * righVal;
                 break;
             case DIVIDE:
+                if (righVal == 0) {
+//                    IllegalArgumentException exception =
+//                            new IllegalArgumentException("Zero rightVal not permitted with divide operation");
+//                    throw exception;
+                    throw new IllegalArgumentException("Zero righVal not permitted with divide exeception");
+                }
                 result = leftVal / righVal;
                 break;
         }
